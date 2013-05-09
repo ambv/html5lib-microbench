@@ -33,6 +33,10 @@ Disclaimer
 Test results
 ------------
 
+Mac OS X 10.8.3; 2,4 GHz Intel Core i5; 8 GB RAM.
+
 * Python 3.3: 874 seconds
+
+* Python 2.7: 972 seconds
 
 * PyPy 2.0: 195 seconds
