@@ -13,8 +13,10 @@ import time
 
 files = {}
 
+cwd = os.path.dirname(__file__)
+
 for file_name in ('spec.html', 'template.html', 'py33_py34.html'):
-    with open(os.path.join('data', file_name), 'rb') as f:
+    with open(os.path.join(cwd, 'data', file_name), 'rb') as f:
         files[file_name] = f.read()
     print(file_name)
 
