@@ -1,0 +1,6 @@
+git+git://github.com/html5lib/html5lib-python.git
+charade
+datrie
+Genshi
+nose
+six
