@@ -11,16 +11,6 @@ import os
 import time
 
 
-files = {}
-
-cwd = os.path.dirname(__file__)
-
-for file_name in ('spec.html', 'template.html', 'py33_py34.html'):
-    with open(os.path.join(cwd, 'data', file_name), 'rb') as f:
-        files[file_name] = f.read()
-    print(file_name)
-
-
 def bench(files):
     etree_doc = html5lib.parse(files['spec.html'])
     dom_doc = html5lib.parse(files['spec.html'], treebuilder="dom")
@@ -41,7 +31,18 @@ def bench(files):
     print('py33_py34')
 
 
-start = time.time()
-for i in range(1):
-    bench(files)
-print(time.time() - start)
+def main():
+    files = {}
+    cwd = os.path.dirname(__file__)
+    for file_name in ('spec.html', 'template.html', 'py33_py34.html'):
+        with open(os.path.join(cwd, 'data', file_name), 'rb') as f:
+            files[file_name] = f.read()
+        print(file_name)
+    start = time.time()
+    for i in range(1):
+        bench(files)
+    print(time.time() - start)
+
+
+if __name__ == '__main__':
+    main()

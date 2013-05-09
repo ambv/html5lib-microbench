@@ -25,10 +25,20 @@ this: for each of the three files I do:
     assert etree_doc.tag == '{http://www.w3.org/1999/xhtml}html'
     assert len(dom_doc.toxml()) > 1024
 
+How to run it
+-------------
+
+.. code-block:: bash
+
+  $ pip install tox
+  $ tox
+
+
 Disclaimer
 ----------
 
 .. image:: http://cdn.memegenerator.net/instances/400x/37208074.jpg
+
 
 Test results
 ------------

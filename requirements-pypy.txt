@@ -1,5 +1,8 @@
 git+git://github.com/html5lib/html5lib-python.git
 charade
+distribute
 Genshi
-nose
 six
+
+# datrie doesn't make sense on PyPy since it's a C-accelerated version of
+# a trie bundled with html5lib (and is slower than the pure-python version)

@@ -1,0 +1,2 @@
+include README.rst requirements-cpython.txt requirements-pypy.txt
+recursive-include data *.*
