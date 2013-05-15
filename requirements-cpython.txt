@@ -3,4 +3,5 @@ charade
 distribute
 datrie
 Genshi
+lxml
 six

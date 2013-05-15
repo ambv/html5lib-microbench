@@ -21,7 +21,7 @@ with codecs.open(
 
 setup (
     name = 'html5lib-microbench',
-    version = '0.6.1',
+    version = '0.7.0',
     author = 'Łukasz Langa',
     author_email = 'lukasz@langa.pl',
     description = "This is not a scientific benchmark.",
