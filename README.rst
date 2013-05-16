@@ -1,9 +1,9 @@
-===============================
-Trivial html5lib PyPy benchmark
-===============================
+==========================
+Trivial html5lib benchmark
+==========================
 
 This is the simplest test I could think of that tells me something about
-the performance of PyPy 2.0. I took three big real world HTML documents:
+the performance of html5lib. I took three big real world HTML documents:
 
 - the WHATWG HTML specification:
   http://www.whatwg.org/specs/web-apps/current-work/
@@ -14,9 +14,10 @@ the performance of PyPy 2.0. I took three big real world HTML documents:
 - a diff between CPython branches:
   http://hg.python.org/cpython/rev/122d42d5268e:7a45415956b9
 
-and parsed them using the upcoming html5lib 1.0, a pure-python HTML
-parser which parses markup like your Web browser. The relevant part is
-this: for each of the three files I do:
+and 200 typical-size Wikipedia pages. Then I parsed them using the
+upcoming html5lib 1.0, a pure-python HTML parser which parses markup
+like your Web browser. The relevant part is this: for each of the three
+files I do:
 
 .. code-block:: python
 
@@ -43,10 +44,23 @@ Disclaimer
 Test results
 ------------
 
-Mac OS X 10.8.3; 2,4 GHz Intel Core i5; 8 GB RAM.
+Mac OS X 10.8.3; 2,4 GHz Intel Core i5; 8 GB RAM. Sums results from
+"``html5lib`` etree" and "``html5lib`` dom".
+
+Three huge documents
+~~~~~~~~~~~~~~~~~~~~
 
 * Python 3.3: 874 seconds
 
 * Python 2.7: 972 seconds
 
 * PyPy 2.0: 195 seconds
+
+200 typical documents
+~~~~~~~~~~~~~~~~~~~~~
+
+* Python 3.3: 117 seconds
+
+* Python 2.7: 128 seconds
+
+* PyPy 2.0: 326 seconds
